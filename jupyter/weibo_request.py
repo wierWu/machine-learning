@@ -33,20 +33,20 @@ class WeiboRequest(object):
 
         return item
 
-    def parse_tweet_info(data):
+    def parse_tweet_info(self,data):
         """
         解析推文数据
         """
         tweet = {
-            # "_id": str(data['mid']),
-            # "mblogid": data['mblogid'],
+            "_id": str(data['mid']),
+            "mblogid": data['mblogid'],
             # "created_at": parse_time(data['created_at']),
-            # "geo": data['geo'],
-            # "ip_location": data.get('region_name', None),
-            # "reposts_count": data['reposts_count'],
-            # "comments_count": data['comments_count'],
-            # "attitudes_count": data['attitudes_count'],
-            # "source": data['source'],
+            "geo": data['geo'],
+            "ip_location": data.get('region_name', None),
+            "reposts_count": data['reposts_count'],
+            "comments_count": data['comments_count'],
+            "attitudes_count": data['attitudes_count'],
+            "source": data['source'],
             "content": data['text_raw'].replace('\u200b', ''),
             # "pic_urls": ["https://wx1.sinaimg.cn/orj960/" + pic_id for pic_id in data.get('pic_ids', [])],
             # "pic_num": data['pic_num'],
