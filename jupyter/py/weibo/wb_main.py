@@ -3,6 +3,7 @@ import re
 import copy
 import torch
 import platform
+import time
 from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 from langchain.chains import LLMChain
@@ -45,6 +46,7 @@ Example 1:{example1},Example 2:{example2},Example 3:{example3}. And answer in Ch
                 continue
             print('>>>AI自动回复:',resp.strip())
             print('===================================')
+            time.sleep(3)
             j=j+1
 
 def getWeiboInputList(query):
